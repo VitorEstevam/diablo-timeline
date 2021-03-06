@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -14,15 +20,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div id="app">
-        <div class="swiper-button swiper-button-prev"></div>
+    <video autoplay muted loop id="bgvid" width="100%">
+        <source src="src/background.mp4" type="video/mp4">
+    </video>
+    <div class="main-container" id="app">
         <div class="swiper-container">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide" v-on:click="openPopup">
@@ -31,31 +37,36 @@
                 <div class="swiper-slide" v-on:click="openPopup">
                     <h2>Slide1</h2>
                 </div>
-                <div class="swiper-slide" v-on:click="openPopup">>
+                <div class="swiper-slide" v-on:click="openPopup">
+                    <h2>Slide1</h2>
+                </div>
+                <div class="swiper-slide" v-on:click="openPopup">
+                    <h2>Slide1</h2>
+                </div>
+                <div class="swiper-slide" v-on:click="openPopup">
+                    <h2>Slide1</h2>
+                </div>
+                <div class="swiper-slide" v-on:click="openPopup">
+                    <h2>Slide1</h2>
+                </div>
+                <div class="swiper-slide" v-on:click="openPopup">
                     <h2>Slide1</h2>
                 </div>
             </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-
-            <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
-        <div class="swiper-button swiper-button-next"></div>
 
+        <div class="btn-left">
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="space-between"></div>
+        <div class="btn-right">
+            <div class="swiper-button-next"></div>
+        </div>
 
         <div class="pop-up-container" v-if="open" v-on:click="openPopup">
-            <div class="pop-up-content" v-on:click="">
-
-            </div>
+            <div class="pop-up-content"></div>
         </div>
     </div>
-
-
-
     <script src="main.js"></script>
 </body>
 

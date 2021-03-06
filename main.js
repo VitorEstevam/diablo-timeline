@@ -16,8 +16,8 @@ new Vue({
     },
     mounted() {
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 15,
+            slidesPerView: "auto",
+            // spaceBetween: 15,
             paginationClickable: true,
             grabCursor: true,
             paginationClickable: true,
