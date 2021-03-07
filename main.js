@@ -1,6 +1,6 @@
 const data = [
-    { dateLabel: 'January 2017', title: 'Gathering Information' },
-    { dateLabel: 'February 2017', title: 'Planning' },
+    { dateLabel: 'January 2017', title: 'GDialbo 1' },
+    { dateLabel: 'February 199', title: 'diablo 2' },
     { dateLabel: 'March 2017', title: 'Design' },
     { dateLabel: 'April 2017', title: 'Content Writing and Assembly' },
     { dateLabel: 'May 2017', title: 'Coding' },
@@ -13,7 +13,7 @@ new Vue({
     el: '#app',
     data: {
         steps: data,
-        open: false,
+        open: true,
     },
     mounted() {
         var swiper = new Swiper('.swiper-container', {

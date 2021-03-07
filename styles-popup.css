@@ -1,0 +1,109 @@
+/* pop-up -----------------------------------------------------*/
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .25s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.pop-up-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.pop-up-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(2px);
+}
+
+.pop-up-content {
+    background-color: rgba(0, 0, 0, 0.561);
+    position: relative;
+    width: 500px;
+    height: 80%;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 450px) {
+    .pop-up-content {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pop-up-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(144, 1, 1);
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    .pop-up-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.pop-up-image {
+    flex: 2;
+    object-fit: cover;
+}
+
+.pop-up-text {
+    padding: 15px;
+    flex: 2 0 0;
+    overflow: overlay;
+}
+
+.pop-up-other {
+    flex: 0.5;
+    /* background-color: darkviolet; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(54, 54, 54);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(44, 44, 44);
+}

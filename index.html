@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-popup.css">
 </head>
 
 <body>
@@ -44,13 +45,42 @@
             <div class="swiper-button-next"></div>
         </div>
 
-        <div class="pop-up-container" v-if="open">
-
-            <div class="pop-up-content">
-                <div class="pop-up-close" v-on:click="closePopup"></div>
+        <transition name="fade">
+            <div class="pop-up-container" v-if="open">
+                <div class="pop-up-background" v-on:click="closePopup"></div>
+                <div class="pop-up-content">
+                    <div class="pop-up-close" v-on:click="closePopup"></div>
+                    <img src="https://via.placeholder.com/150x200" class="pop-up-image" draggable="false" />
+                    <div class="pop-up-text">
+                        <p>aaaaaaaaaaaaaaaaaa</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus ultrices mi id dictum.
+                            Donec imperdiet elit suscipit tortor pretium varius. Nam a augue vitae magna vulputate
+                            tincidunt ut sed velit. Morbi tristique cursus lacus in pulvinar. Ut laoreet ultrices
+                            tincidunt. Pellentesque dolor lacus, lacinia ut ante vitae, consectetur malesuada nisl. Duis
+                            justo ligula, tincidunt in quam at, efficitur tincidunt est. Curabitur lacinia auctor
+                            lacinia. Fusce sed facilisis augue, tempus tempor augue. Nulla cursus blandit diam.
+                            Vestibulum imperdiet scelerisque felis sed congue. Maecenas nec vehicula ex, non facilisis
+                            quam. Nullam id aliquet turpis. Nullam urna libero, interdum id mauris quis, malesuada
+                            luctus massa. Etiam felis eros, blandit id nulla et, tempor efficitur diam.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus ultrices mi id dictum.
+                            Donec imperdiet elit suscipit tortor pretium varius. Nam a augue vitae magna vulputate
+                            tincidunt ut sed velit. Morbi tristique cursus lacus in pulvinar. Ut laoreet ultrices
+                            tincidunt. Pellentesque dolor lacus, lacinia ut ante vitae, consectetur malesuada nisl. Duis
+                            justo ligula, tincidunt in quam at, efficitur tincidunt est. Curabitur lacinia auctor
+                            lacinia. Fusce sed facilisis augue, tempus tempor augue. Nulla cursus blandit diam.
+                            Vestibulum imperdiet scelerisque felis sed congue. Maecenas nec vehicula ex, non facilisis
+                            quam. Nullam id aliquet turpis. Nullam urna libero, interdum id mauris quis, malesuada
+                            luctus massa. Etiam felis eros, blandit id nulla et, tempor efficitur diam.</p>
+                    </div>
+                    <div class="pop-up-other">
+                        <p>a</p>
+                        <p>b</p>
+                        <p>c</p>
+                        <p>d</p>
+                    </div>
+                </div>
             </div>
-
-        </div>
+        </transition>
     </div>
     <script src="main.js"></script>
 </body>
