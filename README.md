@@ -1,4 +1,3 @@
 # timeline
 
-timeline base usando vue.js, swiper e, logo mais, bootstrap
-
+timeline base usando vue.js e swiper
