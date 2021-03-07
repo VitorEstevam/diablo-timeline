@@ -6,14 +6,27 @@ body {
     /* align-items: center; */
     justify-content: center;
     flex-direction: column;
-
     background-color: black;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 30px
 }
 
 * {
     margin: 0px;
 }
 
+/* page -----------------------------------------------------*/
 .main-container {
     height: 100%;
     width: 100%;
@@ -40,21 +53,24 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    /* background-color: brown; */
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
 }
 
 .swiper-slide {
-    /* background-color: lightskyblue; */
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 400px;
     width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.swiper-slide h2 {
-    margin-bottom: 65px;
-    height: auto;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .swiper-slide::before {
@@ -62,27 +78,94 @@ body {
     position: absolute;
     height: 5px;
     width: 100%;
-    /* margin-left: 5%; */
     background-color: black;
+    pointer-events: none;
 }
 
-.swiper-slide::after {
+.swipe-ball {
     content: " ";
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(144, 1, 1);
     border-radius: 50%;
+    cursor: pointer;
+    pointer-events: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.4s;
+}
+
+.swiper-clickable {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.swiper-clickable h2 {
+    margin-bottom: 15px;
+    height: auto;
+    transition: all 0.4s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(163, 163, 163);
+}
+
+.swiper-clickable h3 {
+    margin-top: 15px;
+    height: auto;
+    transition: all 0.4s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(163, 163, 163);
+}
+
+.swiper-clickable:hover~.swipe-ball {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(187, 0, 0);
+}
+
+.swiper-clickable:hover h2 {
+    margin-bottom: 20px;
+}
+
+.swiper-clickable:hover h3 {
+    margin-top: 20px;
+}
+
+
+/* lateral buttons --------------------------------------------*/
+.swiper-button-next,
+.swiper-button-prev {
+    color: rgb(144, 1, 1);
+    outline: none;
+    border: none;
+    appearance: none;
 }
 
 .btn-right {
     right: 0px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .btn-left {
     left: 0px;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    transition: all 0.5s;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+    font-size: 60px;
+}
+
+/* pop-up -----------------------------------------------------*/
 .pop-up-container {
     position: absolute;
     left: 0;
@@ -99,8 +182,35 @@ body {
     justify-content: center;
 }
 
+
 .pop-up-content {
+    background-color: rgba(0, 0, 0, 0.561);
+    position: relative;
     width: 300px;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.561);
+}
+
+@media (max-width: 400px) {
+    .pop-up-content {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pop-up-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(144, 1, 1);
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .pop-up-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
 }

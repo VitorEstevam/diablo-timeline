@@ -8,6 +8,7 @@ const data = [
     { dateLabel: 'July 2017', title: 'Maintenance' }
 ];
 
+
 new Vue({
     el: '#app',
     data: {
@@ -17,6 +18,7 @@ new Vue({
     mounted() {
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: "auto",
+            centeredSlides: true,
             // spaceBetween: 15,
             paginationClickable: true,
             grabCursor: true,
@@ -34,8 +36,15 @@ new Vue({
         });
     },
     methods: {
-        openPopup: function () {
+        openPopup: function (index) {
             this.open = !this.open
+            console.log(index)
+        },
+        closePopup: function (index) {
+            this.open = false
+            console.log(index)
         }
     }
 })
+
+
