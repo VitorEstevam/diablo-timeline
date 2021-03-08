@@ -1,19 +1,8 @@
-const data = [
-    { dateLabel: 'January 2017', title: 'GDialbo 1' },
-    { dateLabel: 'February 199', title: 'diablo 2' },
-    { dateLabel: 'March 2017', title: 'Design' },
-    { dateLabel: 'April 2017', title: 'Content Writing and Assembly' },
-    { dateLabel: 'May 2017', title: 'Coding' },
-    { dateLabel: 'June 2017', title: 'Testing, Review & Launch' },
-    { dateLabel: 'July 2017', title: 'Maintenance' }
-];
-
-
 new Vue({
     el: '#app',
     data: {
         steps: data,
-        open: true,
+        open: false,
     },
     mounted() {
         var swiper = new Swiper('.swiper-container', {
@@ -34,6 +23,7 @@ new Vue({
                 el: '.swiper-scrollbar',
             },
         });
+
     },
     methods: {
         openPopup: function (index) {

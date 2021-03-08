@@ -20,8 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .pop-up-background {
@@ -58,8 +56,25 @@
     right: -25px;
     height: 50px;
     width: 50px;
-    background-color: rgb(144, 1, 1);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 50%;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-close::before {
+    font-size: 5rem;
+    color: rgb(144, 1, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.pop-up-close:hover::before {
+    font-size: 5rem;
+    color: rgb(116, 0, 0);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 450px) {
