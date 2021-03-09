@@ -1,4 +1,6 @@
 
+document.querySelector(".main-container").style.opacity = "0";
+
 fetch("data.json")
     .then(response => response.json())
     .then((data) => initApp(data));
