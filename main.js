@@ -12,7 +12,8 @@ function initApp(data) {
         el: '#app',
         data: {
             steps: data,
-            open: false
+            open: false,
+            step: {}
         },
         async mounted() {
             var swiper = new Swiper('.swiper-container', {
@@ -36,8 +37,10 @@ function initApp(data) {
         },
         methods: {
             openPopup: function (index) {
+                this.step = this.steps[index]
                 this.open = !this.open
                 console.log(index)
+                console.log(this.step)
             },
             closePopup: function (index) {
                 this.open = false

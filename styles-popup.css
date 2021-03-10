@@ -35,7 +35,7 @@
 .pop-up-content {
     background-color: rgba(0, 0, 0, 0.561);
     position: relative;
-    width: 500px;
+    width: 30%;
     height: 80%;
     color: white;
 
@@ -56,23 +56,29 @@
     right: -25px;
     height: 50px;
     width: 50px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(211, 211, 211, 0.1);
     border-radius: 50%;
     cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.2s;
+}
+
+.pop-up-close:hover {
+    background-color: rgba(211, 211, 211, 0.3);
 }
 
 .pop-up-close::before {
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(144, 1, 1);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .pop-up-close:hover::before {
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(116, 0, 0);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -96,13 +102,41 @@
     overflow: overlay;
 }
 
-.pop-up-other {
+.pop-up-header-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 20px;
+}
+
+.pop-up-footer {
     flex: 0.5;
     /* background-color: darkviolet; */
+    border-top: 1px solid rgba(169, 169, 169, 0.5);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.pop-up-footer a {
+    background-color: rgba(211, 211, 211, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.pop-up-footer a:hover {
+    background-color: rgba(211, 211, 211, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.pop-up-footer a:before {
+    font-size: 2em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* scrollbar */
