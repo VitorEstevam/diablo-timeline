@@ -1,5 +1,6 @@
-
 document.querySelector(".main-container").style.opacity = "0";
+
+var app;
 
 fetch("data.json")
     .then(response => response.json())
@@ -8,15 +9,35 @@ fetch("data.json")
 function initApp(data) {
     setTimeout(function () { document.querySelector(".main-container").style.opacity = "1"; }, 500);
 
-    var app = new Vue({
+    app = new Vue({
         el: '#app',
         data: {
             steps: data,
             open: false,
-            step: {}
+            step: data[0],
+            swiper2: Object,
         },
         async mounted() {
-            var swiper = new Swiper('.swiper-container', {
+            var swiper = new Swiper('.swiper-container-main', {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                // spaceBetween: 15,
+                paginationClickable: true,
+                grabCursor: true,
+                paginationClickable: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+
+            this.swiper2 = new Swiper('.swiper-container-pop-up', {
                 slidesPerView: "auto",
                 centeredSlides: true,
                 // spaceBetween: 15,
@@ -41,6 +62,27 @@ function initApp(data) {
                 this.open = !this.open
                 console.log(index)
                 console.log(this.step)
+
+                this.swiper2 = new Swiper('.swiper-container-pop-up', {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    // spaceBetween: 15,
+                    paginationClickable: true,
+                    grabCursor: true,
+                    paginationClickable: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+                setTimeout(() => this.swiper2.init(), 1)
+
             },
             closePopup: function (index) {
                 this.open = false
@@ -49,4 +91,3 @@ function initApp(data) {
         }
     })
 }
-

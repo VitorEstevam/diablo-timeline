@@ -65,6 +65,8 @@
     align-items: center;
 
     transition: all 0.2s;
+
+    z-index: 5;
 }
 
 .pop-up-close:hover {
@@ -137,6 +139,10 @@
 .pop-up-footer a:before {
     font-size: 2em;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-container-pop-up {
+    height: 100%
 }
 
 /* scrollbar */

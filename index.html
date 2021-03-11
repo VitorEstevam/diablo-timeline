@@ -27,9 +27,9 @@
         <source src="src/background.mp4" type="video/mp4">
     </video>
     <div class="main-container" id="app">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item, index) in steps" :key="item.name">
+        <div class="swiper-container swiper-container-main">
+            <div class="swiper-wrapper swiper-wrapper-main">
+                <div class="swiper-slide swiper-slide-main" v-for="(item, index) in steps" :key="item.name">
                     <div class="swiper-clickable" v-on:click="openPopup(index)">
                         <h2>{{item.nome}}</h2>
                         <h3>{{item.lancamento}}</h3>
@@ -54,7 +54,24 @@
                 <div class="pop-up-content">
                     <div class="pop-up-close bi bi-x" v-on:click="closePopup">
                     </div>
-                    <img src="https://via.placeholder.com/150x200" class="pop-up-image" draggable="false" />
+                    <div class="pop-up-image">
+                        <div class="swiper-container swiper-container-pop-up" id="pop-up-swiper">
+                            <div class="swiper-wrapper swiper-wrapper-pop-up">
+                                <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.imagem" :key="item">
+                                    <div
+                                        style="width: 100%; height:100%; background-color:blue; border:1px solid black">
+                                        {{item}}
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.video" :key="item">
+                                    <div
+                                        style="width: 100%; height:100%; background-color:green; border:1px solid black">
+                                        {{item}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src=" https://via.placeholder.com/150x200" class="pop-up-image" draggable="false" /> -->
                     <div class="pop-up-text">
                         <div class=" pop-up-header-line">
                             <h1>{{step.nome}}</h1>
