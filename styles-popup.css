@@ -152,7 +152,6 @@
 @media (max-width: 1300px) {
     .pop-up-footer a:before {
         font-size: 1.2em;
-
     }
 }
 
@@ -176,4 +175,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(44, 44, 44);
+}
+
+
+/* other */
+.active-bullet {
+    color: red;
 }

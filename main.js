@@ -72,13 +72,7 @@ function initApp(data) {
                     paginationClickable: true,
                     pagination: {
                         el: '.swiper-pagination',
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
+                        dynamicBullets: true,
                     },
                 });
                 setTimeout(() => this.swiper2.init(), 1)
