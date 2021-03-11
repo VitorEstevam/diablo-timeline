@@ -35,13 +35,21 @@
 .pop-up-content {
     background-color: rgba(0, 0, 0, 0.561);
     position: relative;
-    width: 30%;
+    width: 450px;
     height: 80%;
     color: white;
 
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 1300px) {
+    .pop-up-content {
+        width: 350px;
+        height: 90%;
+    }
+}
+
 
 @media (max-width: 450px) {
     .pop-up-content {
@@ -139,6 +147,13 @@
 .pop-up-footer a:before {
     font-size: 2em;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1300px) {
+    .pop-up-footer a:before {
+        font-size: 1.2em;
+
+    }
 }
 
 .swiper-container-pop-up {
