@@ -2,7 +2,7 @@ document.querySelector(".main-container").style.opacity = "0";
 
 var app;
 
-fetch("data.json")
+fetch("data-1.json")
     .then(response => response.json())
     .then((data) => initApp(data));
 
