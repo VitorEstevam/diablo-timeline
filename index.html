@@ -59,14 +59,21 @@
                             <div class="swiper-wrapper swiper-wrapper-pop-up">
                                 <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.imagem" :key="item">
                                     <div
-                                        style="width: 100%; height:100%; background-color:blue; border:1px solid black">
-                                        {{item}}
+                                        style="width: 100%; height:100%; position:absolute; background-color:black; border:1px solid black">
+                                        <img :src="item" loading="lazy" alt="">
                                     </div>
                                 </div>
                                 <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.video" :key="item">
                                     <div
-                                        style="width: 100%; height:100%; background-color:green; border:1px solid black">
-                                        {{item}}</div>
+                                        style="width: 100%; height:100%; position:absolute;background-color:black; border:1px solid black">
+                                        <div style="height:90%;">
+                                            <iframe src="https://www.youtube.com/embed/H1FbySVjmYY" loading="lazy"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <!-- <div style="height:40px;"></div> -->
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>

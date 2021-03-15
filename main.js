@@ -66,17 +66,18 @@ function initApp(data) {
                 this.swiper2 = new Swiper('.swiper-container-pop-up', {
                     slidesPerView: "auto",
                     centeredSlides: true,
-                    // spaceBetween: 15,
                     paginationClickable: true,
                     grabCursor: true,
-                    paginationClickable: true,
+                    lazy: true,
                     pagination: {
                         el: '.swiper-pagination',
-                        dynamicBullets: true,
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="' + className + '">' + (index + 1) + '</span>';
+                        },
                     },
                 });
                 setTimeout(() => this.swiper2.init(), 1)
-
             },
             closePopup: function (index) {
                 this.open = false

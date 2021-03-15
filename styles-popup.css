@@ -104,6 +104,19 @@
 .pop-up-image {
     flex: 2;
     object-fit: cover;
+    flex-basis: fit-content;
+}
+
+.pop-up-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.pop-up-image iframe {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
 }
 
 .pop-up-text {
@@ -179,6 +192,23 @@
 
 
 /* other */
-.active-bullet {
-    color: red;
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    /* background: rgba(0, 0, 0, 0.2); */
+    background: rgba(255, 255, 255, 0.75);
+
+    user-select: none;
+    outline: none;
+    margin: 2%
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
 }
