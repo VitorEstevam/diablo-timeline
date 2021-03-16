@@ -2,7 +2,7 @@ document.querySelector(".main-container").style.opacity = "0";
 
 var app;
 
-fetch("data-1.json")
+fetch("data-2.json")
     .then(response => response.json())
     .then((data) => initApp(data));
 
@@ -44,6 +44,7 @@ function initApp(data) {
                 paginationClickable: true,
                 grabCursor: true,
                 paginationClickable: true,
+                lazy: true,
                 pagination: {
                     el: '.swiper-pagination',
                 },
