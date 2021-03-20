@@ -126,6 +126,10 @@
     padding: 15px;
     flex: 2 0 0;
     overflow: overlay;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 20px;
+    text-align: justify;
 }
 
 .pop-up-header-line {
@@ -135,6 +139,9 @@
     align-items: flex-end;
 
     margin-bottom: 20px;
+
+    font-family: exocet;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .pop-up-footer {
@@ -167,7 +174,7 @@
 
 @media (max-width: 1300px) {
     .pop-up-footer a:before {
-        font-size: 1.2em;
+        font-size: 2em;
     }
 }
 
@@ -208,10 +215,14 @@
 
     user-select: none;
     outline: none;
-    margin: 2%
+    margin: 2%;
+
+    font-size: 18px;
+    font-family: exocet;
+    font-weight: bold;
 }
 
 .swiper-pagination-bullet-active {
     color: #fff;
-    background: #007aff;
+    background: #cf0000;
 }
