@@ -1,4 +1,6 @@
 document.querySelector(".main-container").style.opacity = "0";
+document.querySelector(".refs-container").style.opacity = "0";
+
 
 var app;
 
@@ -8,6 +10,7 @@ fetch("data-3.json")
 
 function initApp(data) {
     setTimeout(function () { document.querySelector(".main-container").style.opacity = "1"; }, 500);
+    setTimeout(function () { document.querySelector(".refs-container").style.opacity = "1"; }, 500);
 
     app = new Vue({
         el: '#app',
