@@ -1,5 +1,4 @@
 document.querySelector(".main-container").style.opacity = "0";
-document.querySelector(".refs-container").style.opacity = "0";
 
 
 var app;
