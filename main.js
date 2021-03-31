@@ -10,7 +10,7 @@ fetch("data-3.json")
 
 function initApp(data) {
     setTimeout(function () { document.querySelector(".main-container").style.opacity = "1"; }, 500);
-    setTimeout(function () { document.querySelector(".refs-container").style.opacity = "1"; }, 500);
+
 
     app = new Vue({
         el: '#app',
@@ -90,7 +90,8 @@ function initApp(data) {
                 console.log(index)
             },
             openPopup2: function (){
-                this.open2 = true
+                this.open2 = true;
+                setTimeout(function () { document.querySelector(".refs-container").style.opacity = "1"; }, 500);
             },
             closePopup2: function () {
                 this.open2 = false
