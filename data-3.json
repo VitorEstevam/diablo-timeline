@@ -1,0 +1,47 @@
+[
+    {
+        "nome": "Diablo",
+        "lancamento": "31/12/1996",
+        "resumo": "A narrativa se passa na cidade fictícia de Tristam, onde o jogador tem como objetivo derrotar o mal que foi liberado pelo Senhor das Trevas Diablo. Diferentes criaturas assolam a região e o jogador então é posto como herói que irá salvar a cidade Tristam. As classes disponíveis para jogar em diablo I são Guerreiro, Bruxo e Gatuno. ",
+        "comprar": "https://www.gog.com/game/diablo",
+        "fandom": "https://diablo.fandom.com/wiki/Diablo_(Game)",
+        "video":["https://www.youtube.com/watch?v=lHV7VnWvz_o"],
+        "imagem":["src/imgs/diablo1_1.webp","src/imgs/diablo1_2.webp"]
+    },
+    {
+        "nome": "Diablo II",
+        "lancamento": "26/06/2000",
+        "resumo": "Diablo II segue após a derrota de Diablo, mas como um último recurso ele consegue dominar o corpo do Herói do primeiro jogo, assim aos poucos reconstruindo seus poderes, e o mal então passa a se espalhar por mais cidades. Nesse jogo o jogador terá que derrotar mais desafios parta trazer a paz novamente ao mundo. Em diablo dois é possível jogar com quatro classes Amazona, Barbaro, Feiticeiro, Necromancer e Paladino. O jogo foi um sucesso de vendas e conseguiu atingir muitos jogadores devido a possibilidade de jogá-lo online.",
+        "comprar": "https://us.shop.battle.net/pt-br/product/diablo-ii",
+        "fandom": "https://diablo.fandom.com/wiki/Diablo_II",
+        "video": ["https://www.youtube.com/watch?v=KxnWjyvmpnI","https://www.youtube.com/playlist?list=PLD4argkHizK7IXDr2NwugqHYtj2c5PfjH","https://www.youtube.com/watch?v=XRXP5td0ZrA"],
+        "imagem":["src/imgs/diablo2_1.webp","src/imgs/diablo2_2.webp"]
+    },
+    {
+        "nome": "Diablo III",
+        "lancamento": "15/05/2012",
+        "resumo": "\r\nDiablo III ocorre 20 anos após o fim do do segundo título da franquia. Após o mal ser derrotado, um imenso cometa cai justamente no local onde Diablo estava aprisionado. Um novo desafio surge com o mal dominando novamente o mundo. Neste título o jogador pode jogar com seis classes : Bárbaro, Feiticeiro, Arcanista, Monge, Caçador de Demônios e Necromante. \r",
+        "comprar": "https://us.shop.battle.net/pt-br/product/diablo-iii",
+        "fandom": "https://diablo.fandom.com/wiki/Diablo_III",
+        "video":["https://www.youtube.com/watch?v=Q17FDfU7-ds"],
+        "imagem":["src/imgs/diablo3_1.webp","src/imgs/diablo3_2.webp"]
+    },
+    {
+        "nome": "Diablo Immortal",
+        "lancamento": "??/??/2021",
+        "resumo": "PENDENTE",
+        "comprar": "https://play.google.com/store/apps/details?id=com.blizzard.diablo.immortal&hl=pt_BR&gl=US",
+        "fandom": "https://diablo.fandom.com/wiki/Diablo_Immortal",
+        "video": ["https://www.youtube.com/watch?v=Ab2-WW1skOM"],
+        "imagem":["src/imgs/diabloimmortal_1.jpg","src/imgs/diabloimmortal_2.jpg"]
+    },
+    {
+        "nome": "Diablo IV",
+        "lancamento": "??/??/??",
+        "resumo": "Diablo IV será o próximo jogo da franquia e ainda não possui uma previsão de lançamento. O enredo começa a partir da invocação de Lilith, que aparenta ser a principal antagonista da jornada do herói no jogo. Até agora se sabe que em Diablo IV  vai ser possível jogar com três classes: Bárbaro, Druida e Feiticeira. \n",
+        "comprar": "no link",
+        "fandom": "https://diablo.fandom.com/wiki/Diablo_IV",
+        "video":["https://www.youtube.com/watch?v=7RdDpqCmjb4"],
+        "imagem":["src/imgs/diablo4_1.jpg","src/imgs/diablo4_2.jpg"]
+    }
+]

@@ -14,7 +14,7 @@ function initApp(data) {
         data: {
             steps: data,
             open: false,
-            open2:true,
+            open2:false,
             refs:[],
             step: data[0],
             swiper2: Object,
