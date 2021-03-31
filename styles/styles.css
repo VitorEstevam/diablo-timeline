@@ -157,6 +157,50 @@ h2 {
     margin-top: 50px;
 } */
 
+/* about */
+.about{
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    top:0px;
+    right:0px;
+    margin: 40px;
+    padding:10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    transition: all 0.6s;
+}
+.about:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.about a::before{
+    font-size: 2.3rem;
+}
+.refs-container .refs{
+    padding:0px;
+    margin: 20px;
+    margin-top: 40px;
+    font-size: larger;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    overflow: overlay;
+}
+.refs div{
+    margin-top:10px;
+}
+ul{
+    padding:0px;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
 
 /* lateral buttons --------------------------------------------*/
 .swiper-button-next,
