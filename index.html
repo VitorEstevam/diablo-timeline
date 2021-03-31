@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diablo timeline</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
@@ -93,14 +94,15 @@
                         <a class="bi bi-play-btn" :href="'https://www.youtube.com/results?search_query='+step.nome"
                             style="color:lightgrey" target="_blank"></a>
                         <a class="bi bi-people" :href="step.fandom" style="color:lightgrey" target="_blank"></a>
-                        <a class="bi bi-cash" :href='step.comprar' style="color:lightgrey" target="_blank"></a>
+                        <a class="bi bi-cash" style="color:lightgrey" v-if="step.comprar =='' "></a>
+                        <a class="bi bi-cash" :href='step.comprar' style="color:lightgrey" target="_blank" v-else></a>
                     </div>
                 </div>
             </div>
         </transition>
 
         <div class="about" v-on:click="openPopup2">
-            <a class="bi bi-archive"></a>
+            <a class="bi bi-chat-quote"></a>
         </div>
 
         <transition name="fade">
