@@ -91,7 +91,6 @@ function initApp(data) {
             },
             openPopup2: function (){
                 this.open2 = true;
-                setTimeout(function () { document.querySelector(".refs-container").style.opacity = "1"; }, 500);
             },
             closePopup2: function () {
                 this.open2 = false
