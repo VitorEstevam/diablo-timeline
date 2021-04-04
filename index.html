@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diablo timeline</title>
-    <link rel="icon" type="image/png" href="src/favicon.png"/>
+    <!-- <link rel="icon" type="image/png" href="src/favicon.png"/> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
@@ -25,9 +25,20 @@
 </head>
 
 <body>
+    <div class="content">
     <video autoplay muted loop id="bgvid" width="100%">
         <source src="src/background.mp4" type="video/mp4">
     </video>
+    <div class="header">
+        <div class="about" style="visibility:hidden">
+            <a class="bi bi-chat-quote"></a>
+        </div>
+        <h1>DIABLO TIMELINE</h1>
+        
+        <div class="about" v-on:click="openPopup2">
+            <a class="bi bi-chat-quote"></a>
+        </div>
+    </div>
     <div class="main-container" id="app">
         <div class="swiper-container swiper-container-main">
             <div class="swiper-wrapper swiper-wrapper-main">
@@ -50,7 +61,7 @@
         </div>
 
         <transition name="fade">
-            <div class="pop-up-container" v-show="open">
+            <div class="pop-up-container" v-if="open">
                 <div class="pop-up-background" v-on:click="closePopup">
                 </div>
                 <div class="pop-up-content">
@@ -74,7 +85,6 @@
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
                                         </div>
-                                        <!-- <div style="height:40px;"></div> -->
                                     </div>
                                 </div>
                             </div>
@@ -101,9 +111,6 @@
             </div>
         </transition>
 
-        <div class="about" v-on:click="openPopup2">
-            <a class="bi bi-chat-quote"></a>
-        </div>
 
         <transition name="fade">
             <div class="pop-up-container " v-if="open2">
@@ -137,6 +144,7 @@
             </div>
         </transition>
     </div>
+</div>
     <script src="main.js"></script>
 
 </body>
