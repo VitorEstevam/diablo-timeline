@@ -25,126 +25,154 @@
 </head>
 
 <body>
-    <div class="content">
-    <video autoplay muted loop id="bgvid" width="100%">
-        <source src="src/background.mp4" type="video/mp4">
-    </video>
-    <div class="header">
-        <div class="about" style="visibility:hidden">
-            <a class="bi bi-chat-quote"></a>
+    <div class="content" id="app">
+        <video autoplay muted loop id="bgvid" width="100%">
+            <source src="src/background.mp4" type="video/mp4">
+        </video>
+        <div class="header">
+            <div class="about" style="visibility:hidden">
+                <a class="bi bi-chat-quote"></a>
+            </div>
+            <h1>DIABLO TIMELINE</h1>
+
+            <div class="about" v-on:click="openPopup2">
+                <a class="bi bi-chat-quote"></a>
+            </div>
         </div>
-        <h1>DIABLO TIMELINE</h1>
-        
-        <div class="about" v-on:click="openPopup2">
-            <a class="bi bi-chat-quote"></a>
-        </div>
-    </div>
-    <div class="main-container" id="app">
-        <div class="swiper-container swiper-container-main">
-            <div class="swiper-wrapper swiper-wrapper-main">
-                <div class="swiper-slide swiper-slide-main" v-for="(item, index) in steps" :key="item.name">
-                    <div class="swiper-clickable" v-on:click="openPopup(index)"
-                        v-bind:style="{backgroundColor:'#fff', backgroundImage: 'url('+ item.imagem[0] +')' }">
-                        <h2>{{item.nome}}</h2>
-                        <h3>{{item.lancamento}}</h3>
+        <div class="main-container" >
+            <div class="swiper-container swiper-container-main">
+                <div class="swiper-wrapper swiper-wrapper-main">
+                    <div class="swiper-slide swiper-slide-main" v-for="(item, index) in steps" :key="item.name">
+                        <div class="swiper-clickable" v-on:click="openPopup(index)"
+                            v-bind:style="{backgroundColor:'#fff', backgroundImage: 'url('+ item.imagem[0] +')' }">
+                            <h2>{{item.nome}}</h2>
+                            <h3>{{item.lancamento}}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="btn-left">
-            <div class="swiper-button-prev"></div>
-        </div>
-        <div class="space-between"></div>
-        <div class="btn-right">
-            <div class="swiper-button-next"></div>
-        </div>
+            <div class="btn-left">
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="space-between"></div>
+            <div class="btn-right">
+                <div class="swiper-button-next"></div>
+            </div>
 
-        <transition name="fade">
-            <div class="pop-up-container" v-if="open">
-                <div class="pop-up-background" v-on:click="closePopup">
-                </div>
-                <div class="pop-up-content">
-                    <div class="pop-up-close bi bi-x" v-on:click="closePopup">
+            <transition name="fade">
+                <div class="pop-up-container" v-if="open">
+                    <div class="pop-up-background" v-on:click="closePopup">
                     </div>
-                    <div class="pop-up-image">
-                        <div class="swiper-container swiper-container-pop-up" id="pop-up-swiper">
-                            <div class="swiper-wrapper swiper-wrapper-pop-up">
-                                <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.imagem" :key="item">
-                                    <div
-                                        style="width: 100%; height:100%; position:absolute; background-color:black; border:1px solid black">
-                                        <img :src="item" loading="lazy" alt="">
+                    <div class="pop-up-content">
+                        <div class="pop-up-close bi bi-x" v-on:click="closePopup">
+                        </div>
+                        <div class="pop-up-image">
+                            <div class="swiper-container swiper-container-pop-up" id="pop-up-swiper">
+                                <div class="swiper-wrapper swiper-wrapper-pop-up">
+                                    <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.imagem"
+                                        :key="item">
+                                        <div
+                                            style="width: 100%; height:100%; position:absolute; background-color:black; border:1px solid black">
+                                            <img :src="item" loading="lazy" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.video" :key="item">
-                                    <div
-                                        style="width: 100%; height:100%; position:absolute;background-color:black; border:1px solid black">
-                                        <div style="height:90%;">
-                                            <iframe :src="'https://www.youtube.com/embed/'+item.split('v=')[1]"
-                                                loading="lazy" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen></iframe>
+                                    <div class="swiper-slide swiper-slide-pop-up" v-for="item in step.video"
+                                        :key="item">
+                                        <div
+                                            style="width: 100%; height:100%; position:absolute;background-color:black; border:1px solid black">
+                                            <div style="height:90%;">
+                                                <iframe :src="'https://www.youtube.com/embed/'+item.split('v=')[1]"
+                                                    loading="lazy" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen></iframe>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- <img src=" https://via.placeholder.com/150x200" class="pop-up-image" draggable="false" /> -->
+                        <div class="pop-up-text">
+                            <div class=" pop-up-header-line">
+                                <h1>{{step.nome}}</h1>
+                                <h3>{{step.lancamento}}</h3>
+                            </div>
+
+                            <h4>{{step.resumo}}</h4>
+                        </div>
+                        <div class="pop-up-footer">
+                            <a class="bi bi-play-btn" :href="'https://www.youtube.com/results?search_query='+step.nome"
+                                style="color:lightgrey" target="_blank"></a>
+                            <a class="bi bi-people" :href="step.fandom" style="color:lightgrey" target="_blank"></a>
+                            <a class="bi bi-cash" style="color:lightgrey" v-if="step.comprar =='' "></a>
+                            <a class="bi bi-cash" :href='step.comprar' style="color:lightgrey" target="_blank"
+                                v-else></a>
                         </div>
                     </div>
-                    <!-- <img src=" https://via.placeholder.com/150x200" class="pop-up-image" draggable="false" /> -->
-                    <div class="pop-up-text">
-                        <div class=" pop-up-header-line">
-                            <h1>{{step.nome}}</h1>
-                            <h3>{{step.lancamento}}</h3>
+                </div>
+            </transition>
+
+
+            <transition name="fade">
+                <div class="pop-up-container " v-if="open2">
+                    <div class="pop-up-background" v-on:click="closePopup2">
+                    </div>
+                    <div class="pop-up-content refs-container">
+                        <div class="pop-up-close bi bi-x" v-on:click="closePopup2">
                         </div>
-
-                        <h4>{{step.resumo}}</h4>
-                    </div>
-                    <div class="pop-up-footer">
-                        <a class="bi bi-play-btn" :href="'https://www.youtube.com/results?search_query='+step.nome"
-                            style="color:lightgrey" target="_blank"></a>
-                        <a class="bi bi-people" :href="step.fandom" style="color:lightgrey" target="_blank"></a>
-                        <a class="bi bi-cash" style="color:lightgrey" v-if="step.comprar =='' "></a>
-                        <a class="bi bi-cash" :href='step.comprar' style="color:lightgrey" target="_blank" v-else></a>
+                        <p>Trabalho feito para a cadeira de comunicação visual 2 do curso de sistemas e mídias digitais</p>
+                        <p>Referências:</p>
+                        <div class="refs">
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                            <a target="_blank"
+                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                        </div>
+                        <div class="footer">
+                            <p>Feito por:</p>
+                            <p>Vitor Braga, Gustavo Vieira,</p>
+                            <p>Leornado Santos e Francisco Alexandre</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </transition>
-
-
-        <transition name="fade">
-            <div class="pop-up-container " v-if="open2">
-                <div class="pop-up-background" v-on:click="closePopup2">
-                </div>
-                <div class="pop-up-content refs-container">
-                    <div class="pop-up-close bi bi-x" v-on:click="closePopup2">
-                    </div>
-                    <div class="refs">
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-                        <li><a target="_blank"  href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a></li>
-
-                    </div> 
-                </div>
-            </div>
-        </transition>
+            </transition>
+        </div>
     </div>
-</div>
+
     <script src="main.js"></script>
 
 </body>

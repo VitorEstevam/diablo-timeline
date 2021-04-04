@@ -3,7 +3,7 @@ document.querySelector(".main-container").style.opacity = "0";
 
 var app;
 
-fetch("data-3.json")
+fetch("data-4.json")
     .then(response => response.json())
     .then((data) => initApp(data));
 
@@ -16,7 +16,7 @@ function initApp(data) {
         data: {
             steps: data,
             open: false,
-            open2:false,
+            open2:true,
             refs:[],
             step: data[0],
             swiper2: Object,
