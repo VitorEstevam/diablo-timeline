@@ -203,8 +203,8 @@
 
 /* other */
 .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     text-align: center;
     line-height: 20px;
     font-size: 12px;
@@ -212,14 +212,23 @@
     opacity: 1;
     /* background: rgba(0, 0, 0, 0.2); */
     background: rgba(255, 255, 255, 0.75);
+/* 
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:8px;
+    padding-bottom:8px; */
+
+    padding:10px;
+    /* padding-top:9px; */
 
     user-select: none;
     outline: none;
     margin: 2%;
 
-    font-size: 18px;
+    font-size: 26px;
     font-family: exocet;
     font-weight: bold;
+    position: relative;
 }
 
 .swiper-pagination-bullet-active {
