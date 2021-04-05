@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles-popup.css">
 
+
+    <script>
+        if (!window.location.href.includes('time')) {
+            console.log('teste')
+            var date = new Date();
+            document.location.href = window.location.href + "?time=" + Date.now()
+        }
+    </script>
 </head>
 
 <body>
@@ -39,7 +47,7 @@
                 <a class="bi bi-chat-quote"></a>
             </div>
         </div>
-        <div class="main-container" >
+        <div class="main-container">
             <div class="swiper-container swiper-container-main">
                 <div class="swiper-wrapper swiper-wrapper-main">
                     <div class="swiper-slide swiper-slide-main" v-for="(item, index) in steps" :key="item.name">
@@ -122,45 +130,46 @@
                     <div class="pop-up-content refs-container">
                         <div class="pop-up-close bi bi-x" v-on:click="closePopup2">
                         </div>
-                        <p>Trabalho feito para a cadeira de comunicação visual 2 do curso de sistemas e mídias digitais</p>
+                        <p>Trabalho feito para a cadeira de comunicação visual 2 do curso de sistemas e mídias digitais
+                        </p>
                         <p>Referências:</p>
                         <div class="refs">
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                             <a target="_blank"
-                    href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
+                                href="https://us.shop.battle.net/en-us">https://us.shop.battle.net/en-us</a>
                         </div>
                         <div class="footer">
                             <p>Feito por:</p>
