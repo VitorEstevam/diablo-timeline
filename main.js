@@ -1,3 +1,9 @@
+if(!window.location.href.includes('time')){
+    console.log('teste')
+    var date = new Date();
+    document.location.href = window.location.href+"?time="+Date.now()
+}
+
 document.querySelector(".main-container").style.opacity = "0";
 
 
